@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --font-family: "Overpass", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 25px;
+    width: 325px;
+    height: 350px;
+    border-radius: 15px;
+    background: radial-gradient(circle at top, var(--dark-blue), hsl(213, 19%, 10%) 60%);
+}
+
+.image {
+    height: 100px;
+}
+
+.image > img {
+    height: 90%;
+}
+
+.selection {
+    margin-top: 10px;
+    color: var(--orange);
+}
+
+.selection > span {
+    background-color: hsla(216, 12%, 54%, .08);
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.heading {
+    margin-top: 25px;
+    color: var(--white);
+}
+
+.par {
+    color: var(--medium-grey);
+    letter-spacing: -0.5px;
+    line-height: 1.5em;
+}
+
+
+@media only screen and (min-width: 769px) {
+    .container {
+        width: 375px;
+        height: 375px;
+        padding: 40px 30px;
+    }
+
+    .image > img {
+        height: 100%;
+    }
+
+    .selection {
+        margin-top: 25px;
+    }
+
+    .heading {
+        margin-top: 30px;
+    }
+}

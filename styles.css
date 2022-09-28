@@ -99,6 +99,11 @@ input:active {
     color: var(--orange);
 }
 
+.selected {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
 @media only screen and (min-width: 769px) {
     .container {
         width: 375px;
