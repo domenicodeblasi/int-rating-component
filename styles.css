@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --font-family: "Overpass", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    width: 325px;
+    height: 350px;
+    border-radius: 15px;
+    background: radial-gradient(circle at top, var(--dark-blue), hsl(213, 19%, 10%) 60%);
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: hsla(216, 12%, 54%, .08);
+    border-radius: 50%;
+}
+
+.heading {
+    color: var(--white)
+}
+
+.par {
+    color: var(--medium-grey);
+    letter-spacing: -0.5px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: hsla(216, 12%, 54%, .08);
+    border-radius: 50%;
+    color: var(--medium-grey);
+    cursor: pointer;
+}
+
+.num:active {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+input {
+    font-family: var(--font-family);
+    font-weight: 70;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+input:active {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        width: 375px;
+        height: 375px;
+        padding: 35px;
+    }
+
+    .heading {
+        margin-top: 10px;
+    }
+}
