@@ -1,8 +1,8 @@
 "use strict";
 
 const numbers = document.querySelectorAll(".num");
+const submitBtn = document.querySelector(".submit");
 let rating = 0;
-const displayRating = document.querySelector(".rating");
 
 for (let i = 0; i < 5; i++) {
     numbers[i].addEventListener("click", removeLastChoose);
@@ -17,6 +17,12 @@ for (let i = 0; i < 5; i++) {
     function showNewChoose() {
         numbers[i].classList.add("selected");
         rating = +numbers[i].innerHTML;
-        displayRating.innerHTML = rating;
     }
+}
+    
+window.addEventListener("unload", removeAllEventListeners);
+
+function removeAllEventListeners() {
+    numbers[i].removeEventListener("click", removeLastChoose);
+    numbers[i].removeEventListener("click", showNewChoose);
 }
